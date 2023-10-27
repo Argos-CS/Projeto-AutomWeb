@@ -14,11 +14,11 @@ def login(session, username, password):
     }
     
     # Fazer login no site
-    session.post(login_url, data=login_data)
+    session.post(login_url, data=login_data, verify=False)
 
 def acessa_links(session, links):
     for link in links:
-        response = session.get(link)
+        response = session.get(link, verify=False)
         soup = BeautifulSoup(response.content, 'html.parser')
         
         # Aqui você pode analisar o conteúdo da página usando BeautifulSoup
