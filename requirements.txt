@@ -1,0 +1,4 @@
+selenium==3.141.0
+pytz==2021.1
+webdriver_manager==3.4.2
+urllib3==1.26.6
